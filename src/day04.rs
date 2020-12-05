@@ -37,7 +37,6 @@ pub fn check_field_validness(passports : LinkedList<Passport>) -> i32 {
         let mut validness : bool = true;
         for field in fields {
             let field_vec : Vec<&str> = field.split(":").collect();
-            let check = "hcl";
             if field_vec[0] != "cid" && !is_field_valid(field_vec[0], field_vec[1]) {
                 validness = false;
                 break;
